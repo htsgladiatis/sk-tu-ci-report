@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СК Тёплый Угол — Отчет о конкурентной разведке · МСК+СПБ · 02.10.2026</title>
+<style>
+:root{--bg:#10141d;--txt:#eaf0fa;--mut:#9aa6bd;--acc:#E18335;--violet:#5b4bc4;--ok:#1d7a4c;--okbg:#e6f6ec;--warn:#8a5a00;--warnbg:#fff3d9;--bad:#a4132e;--badbg:#fde7eb;--ink:#161b26;--sub:#5b6577;--bd:#e2e6ee;--soft:#f4f6fa;--card:#ffffff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:var(--soft);color:var(--ink);font-size:15px;line-height:1.6}
+a{color:#1f49d6}.wrap{display:flex;min-height:100vh}
+aside{position:sticky;top:0;height:100vh;width:258px;background:var(--bg);color:var(--txt);padding:64px 16px 22px;flex-shrink:0;overflow:auto}
+#burger{position:fixed;top:12px;left:12px;z-index:60;width:44px;height:44px;border-radius:11px;border:1px solid #2a3350;background:#1a2138;color:#fff;font-size:19px;cursor:pointer;line-height:1}
+#burger:hover{background:#232c4a}#burger:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+body.no-side aside{display:none}body.no-side main{max-width:none}
+.tblwrap table{font-size:12.5px}.tblwrap th,.tblwrap td{padding:7px 6px}
+.tblwrap td.site{word-break:break-all}
+.tblwrap td a{overflow-wrap:anywhere}
+aside h1{font-size:15px;margin:0 0 2px}aside .sub{font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.5}
+aside nav a{display:block;color:#c6d0e4;text-decoration:none;font-size:13px;padding:8px 10px;border-radius:8px;margin:1px 0;min-height:44px;display:flex;align-items:center}
+aside nav a:hover{background:#1c2438}aside nav a.act{background:var(--acc);color:#141414;font-weight:600}
+aside nav a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.badge{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;background:#eef;border:1px solid var(--bd);margin:2px 4px 2px 0}
+.b-fact{background:var(--okbg);border-color:#bfe3cd}.b-obs{background:#e9edfb;border-color:#c3cdf3}.b-est{background:var(--warnbg);border-color:#ecd189}.b-hyp{background:var(--badbg);border-color:#f0b3c0}
+main{flex:1;min-width:0;padding:26px 28px 80px;max-width:1560px}
+.hero{background:linear-gradient(135deg,#10141d,#232a4a 65%,#4a3315);color:#fff;border-radius:18px;padding:32px 30px;margin-bottom:18px}
+.hero h2{margin:0 0 8px;font-size:28px;letter-spacing:-.3px;line-height:1.25}.hero p{margin:6px 0;color:#cdd6ea;font-size:14px;max-width:80ch}.hero .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:99px;font-size:12.5px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px}
+.kpi b{font-size:26px;display:block;line-height:1.1}.kpi span{font-size:12.5px;color:var(--sub)}
+section{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;margin:18px 0;scroll-margin-top:12px}
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border-radius:9px;background:#111827;color:#fff;font-size:14px;font-weight:700;padding:0 8px;margin-right:8px;vertical-align:middle}
+section h3{margin:0 0 4px;font-size:20px;line-height:1.4}section .desc{color:var(--sub);font-size:13.5px;margin:0 0 14px;max-width:90ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.wrap{flex-direction:column}aside{position:static;height:auto;width:auto}.grid2,.grid3{grid-template-columns:1fr}main{padding:14px}}
+.mini{background:#f8fafc;border:1px solid var(--bd);border-radius:12px;padding:14px}
+.mini h4{margin:0 0 6px;font-size:14.5px}.mini ul{margin:6px 0;padding-left:18px;font-size:13.5px}.mini li{margin:3px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid var(--bd);padding:9px 8px;text-align:left;vertical-align:top}
+tbody tr:nth-child(even){background:#fafbfe}tbody tr:hover{background:#f1f4fa}
+th{position:sticky;top:0;background:#111827;color:#fff;white-space:nowrap}thead th:first-child{border-radius:8px 0 0 0}thead th:last-child{border-radius:0 8px 0 0}
+.tblwrap{overflow:auto;max-height:600px;border:1px solid var(--bd);border-radius:12px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;align-items:center}
+input,select{padding:9px 11px;border:1px solid var(--bd);border-radius:9px;font-size:13.5px;min-height:44px;background:#fff}
+input:focus-visible,select:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{border:1px solid var(--bd);border-radius:12px;padding:14px;background:#fff}
+.card h4{margin:0 0 4px;font-size:15px}.card .more{display:none;font-size:13px;color:#222;margin-top:6px}.card.open .more{display:block}
+.btn{cursor:pointer;background:#111827;color:#fff;border:0;border-radius:8px;padding:9px 14px;font-size:13px;min-height:44px}
+.btn.ghost{background:#fff;color:#111827;border:1px solid var(--bd)}
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:12px}.swot>div{border-radius:12px;padding:14px;border:1px solid var(--bd);font-size:13.5px}.swot ul{margin:6px 0;padding-left:18px}
+.s{background:var(--okbg)}.w{background:var(--warnbg)}.o{background:#e9edfb}.t{background:var(--badbg)}
+@media(max-width:900px){.swot{grid-template-columns:1fr}}
+.dot{width:10px;height:10px;border-radius:99px;display:inline-block;margin-right:6px;flex-shrink:0}
+.funnel div{background:#111827;color:#fff;border-radius:10px;padding:11px 14px;margin:6px auto;text-align:center;font-size:13.5px}
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:900px){.road{grid-template-columns:1fr}}
+.mx{width:100%;border-collapse:collapse;font-size:12.5px}.mx th,.mx td{border:1px solid var(--bd);padding:8px;vertical-align:top;text-align:left}.mx th{background:#111827;color:#fff;font-weight:600}.mx td.spec{background:#f1f4fa;font-weight:700;white-space:nowrap;width:130px}.mx .mchip{display:inline-block;margin:2px 4px 2px 0;padding:3px 9px;border-radius:99px;color:#fff;font-size:12px;cursor:pointer;border:0}.mx .mchip:hover{filter:brightness(1.15)}.mx .mchip:focus-visible{outline:2px solid var(--acc);outline-offset:2px}@media(max-width:900px){.mx td.spec{width:auto}}
+.matrix .ax{position:absolute;font-size:11px;color:var(--sub);background:rgba(255,255,255,.85);padding:1px 6px;border-radius:6px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--sub);margin-top:8px}
+.chip{transition:transform .15s ease}.chip:hover{transform:translate(-50%,-4px)}
+.tip{font-size:12.5px;color:var(--sub);margin-top:8px}
+footer{color:var(--sub);font-size:12px;margin-top:18px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.chip{transition:none}}
+</style>
+</head>
+<body class="no-side">
+<div class="wrap">
+<button id="burger" title="Скрыть / показать панель" aria-label="Скрыть или показать панель">☰</button>
+<aside>
+<h1>Тёплый Угол · Отчет о конкурентах</h1>
+<div class="sub">МСК + СПБ · срез 10.09–02.10.2026 · только факты разведки</div>
+<nav id="nav">
+<a href="#table">01 Единая таблица</a>
+<a href="#passport">02 Паспорт конкурентов</a>
+<a href="#map">03 Карта конкурентов</a>
+<a href="#profiles">04 Профили конкурентов</a>
+<a href="#offer">05 Предложения конкурентов</a>
+<a href="#context">06 Контекстная разведка</a>
+</nav>
+<div class="tip" style="margin-top:12px;color:#9aa6bd">Метки достоверности: <span class="badge b-fact">факт</span><span class="badge b-obs">наблюдение</span><span class="badge b-est">оценка</span><span class="badge b-hyp">гипотеза</span></div>
+</aside>
+<main>
+<div class="hero" id="cover">
+<h2>Отчет о конкурентах — каркасные дома под ключ</h2>
+<p>Проект: СК «Тёплый Угол» (sk-tu.ru / msk.sk-tu.ru). География: Москва и Санкт-Петербург. Период: 10.09–02.10.2026. База: отчет по Москве 10.09 (10 компаний + факт-чек), срез по Петербургу 02.10, живые сайты компаний и агрегаторы отзывов.</p>
+<div class="meta"><span class="pill">39 игроков в карте</span><span class="pill">14 высоких угроз</span><span class="pill">Только проверенные факты</span></div>
+</div>
+
+<div class="kpis">
+<div class="kpi"><b>39</b><span>компаний в карте</span></div>
+<div class="kpi"><b>16</b><span>представлены в Москве</span></div>
+<div class="kpi"><b>26</b><span>представлены в Петербурге</span></div>
+<div class="kpi"><b>23</b><span>прямых конкурентов</span></div>
+<div class="kpi"><b>14</b><span>высоких угроз прямо сейчас</span></div>
+<div class="kpi"><b>174</b><span>проекта в разделе «для жизни»</span></div>
+</div>
+
+<section id="table"><h3><span class="num">01</span>Единая сравнительная таблица</h3><p class="desc">Все 25 игроков. Поиск, фильтры, сортировка кликом по заголовку. Цены и рейтинги — только из разведки, без додумывания.</p>
+<div class="controls">
+<input id="q" placeholder="Поиск: название, сайт, преимущество…" aria-label="Поиск по таблице">
+<select id="fcity" aria-label="Фильтр по городу"><option value="">Город: все</option><option>МСК</option><option>СПБ</option><option>МСК+СПБ</option></select>
+<select id="ftype" aria-label="Фильтр по типу"><option value="">Тип: все</option><option>прямой</option><option>якорь</option><option>эконом</option><option>премиум</option><option>ниша</option></select>
+<select id="fthr" aria-label="Фильтр по угрозе"><option value="">Угроза: все</option><option>Высокая</option><option>Средняя</option><option>Низкая</option></select>
+<button class="btn ghost" id="reset">Сбросить</button>
+</div>
+<div class="tblwrap"><table id="ctable"><thead><tr>
+<th data-k="name">Компания</th><th data-k="city">Город</th><th data-k="type">Тип</th><th>Сайт</th><th>Цена</th><th>Преимущество</th><th data-k="rating">Рейтинг</th><th>Гарантия</th><th data-k="threat">Угроза</th><th>Источник</th>
+</tr></thead><tbody id="cbody"></tbody></table></div>
+<div class="tip" id="ccount"></div></section>
+
+<section id="passport"><h3><span class="num">02</span>Паспорт конкурентов — юрлица, города, соцсети</h3><p class="desc">Формат — как в вашей таблице «Конкуренты Анализ 2025»: продукт, цены, юрлицо, город, год, соцсети, рейтинги. Обороты и штаты не собирались — в рамках разведки их нет, ячейки не выдумываем. «—» = не найдено в проверенных источниках.</p>
+<div class="tblwrap"><table><thead><tr><th>№</th><th>Компания</th><th>Сайт</th><th>Продукт</th><th>Цены</th><th>Условия и акции</th><th>Заметки</th><th>Юрлицо / ИНН</th><th>Выручка</th><th>Штат</th><th>Владелец</th><th>Город / Год</th><th>Соцсети</th><th>Рейтинги</th></tr></thead><tbody>
+<tr><td>1</td><td><b>Канадская изба</b></td><td>canadskaya-izba.ru</td><td>Каркас, брус, шале; 400+ проектов в год, 35+ бригад</td><td>3,45–7,6 млн</td><td>Подарки; ипотека 6% (дедлайн истек — перепроверить)</td><td>5 точек продаж МСК; проверка АэроОкном</td><td>ООО «Русское шале»<br>ИНН 5024199987</td><td>157 млн (2025)</td><td>11 (2025)</td><td>Рожкова В.В. (100%)</td><td>МСК+МО · 2019</td><td><a href="https://t.me/caiz_ru">TG · 570</a><br><a href="https://vk.com/caiz_ru">VK</a><br><a href="https://www.youtube.com/channel/UCHdHAX75SsApwzOjkok8tdA">YouTube</a></td><td>Карты 4,8 (390)</td></tr>
+<tr><td>2</td><td><b>ГДВЛ</b></td><td>gdvl.ru</td><td>Каркас, газобетон, керамика; 448 проектов</td><td>Дария 114 м² — 5,58 млн; газобетон от 4,77 млн</td><td>Эскроу, ипотека 6%, гарантия 15 лет</td><td>ИНН и адреса на сайте не найдены; убыток −15 млн (2025)</td><td>ООО «ГДВЛ»<br>ИНН 9725063621</td><td>76 млн (2025)</td><td>3 (2025)</td><td>Казадаев Н.Ю. (100%)</td><td>МСК+СПБ · 2021</td><td><a href="https://t.me/gdvl_kanal">TG · 1 285</a><br><a href="https://vk.com/gdvl_kanal">VK</a><br><a href="https://dzen.ru/gdvl">Дзен</a></td><td>Карты МСК 5,0 (236); Домклик 2 501 оценка</td></tr>
+<tr><td>3</td><td><b>Лидер дач</b></td><td>liderdach.ru</td><td>Каркас + газобетон; срок 45–60 дней</td><td>Браун 120 м² — 6,5 млн</td><td>Квиз из 7 шагов; эскроу</td><td>Заявлено 10 офисов — найдено 4; часть каталога переименована; 19 дел в судах, взыскания 1,4 млн</td><td>ООО «Лидер Дач»<br>ИНН 9703034747</td><td>93,8 млн (2025)</td><td>6 (2025)</td><td>Кубышкин А.А. (100%)</td><td>МСК+МО · 2021</td><td><a href="https://t.me/lider_dach">TG · 1 568</a><br><a href="https://vk.com/sk_lider_dach">VK</a><br><a href="https://www.youtube.com/@liderdach">YouTube</a><br><a href="https://rutube.ru/channel/39877659/">Rutube · 40</a></td><td>Карты 5,0 (240)</td></tr>
+<tr><td>4</td><td><b>Теремъ</b></td><td>terem-pro.ru</td><td>Коттеджи 103 + дачные 23 + бани 21</td><td>3,68–7,09 млн</td><td>Эскроу 6%; пакеты «Заходи и живи»</td><td>Бренд-якорь; Теремъ-Финанс; клуб клиентов</td><td>ООО «Теремъ»<br>ИНН 5040095336</td><td>2 590 млн (2025)</td><td>325 (2025)</td><td>Маркозашвили Б.В. + 5 физлиц</td><td>МСК+СПБ · 2009</td><td><a href="https://t.me/terem_pro">TG · 3 657</a><br><a href="https://vk.com/pro_terem">VK</a><br><a href="https://rutube.ru/channel/25817797/">Rutube · 145</a></td><td>Домклик 2 550 оценок</td></tr>
+<tr><td>5</td><td><b>Дачный сезон</b></td><td>home-projects.ru</td><td>Мультитехнология; 5 000+ домов, 248 проектов</td><td>Каркас от 42 990 ₽/м²</td><td>Ипотека от 6,1%; гарантия 15 лет</td><td>Брендовое ООО в конкурсном производстве с 08.2024; операционка — ниже</td><td>ООО «Каркасные Дома Номер Один»<br>ИНН 9703047792</td><td>55 млн (2025)</td><td>4 (2025)</td><td>Макурин М.И. (100%)</td><td>МСК+СПБ · 2021</td><td><a href="https://t.me/domadlyazhizni">TG · 5 198</a><br><a href="https://vk.com/dachny_sezon">VK</a><br><a href="https://www.youtube.com/channel/UCBQtYXAvhOAhdWKkj1rswsA">YouTube</a><br><a href="https://rutube.ru/channel/24958492/">Rutube · 52</a></td><td>Карты 4,7 (402)</td></tr>
+<tr><td>6</td><td><b>Домок</b></td><td>dom-ok.com</td><td>215 каркасных + дачные, бани</td><td>2,67–7,25 млн; скидки до 16%</td><td>Ипотека 6%, эскроу</td><td>Год основания и гарантия на сайте не найдены</td><td>ООО «Домок»<br>ИНН 5002004634</td><td>427 млн (2025)</td><td>69 (2025)</td><td>Васильев Е.А. (90%)</td><td>МСК (юг) · 2016</td><td><a href="https://t.me/domokstroit">TG · 2 224</a><br><a href="https://vk.com/domok.stroit">VK</a><br><a href="https://www.youtube.com/channel/UCVKiajXVBavOQi66uOZKEdA">YouTube</a><br><a href="https://rutube.ru/channel/23469806/">Rutube · 148</a></td><td>Домклик 163; Zoon 2,6 (33)</td></tr>
+<tr><td>7</td><td><b>Каркасник</b></td><td>karkasnik.ru</td><td>Каркас + брус; ~28 проектов; свое производство</td><td>От 1,01 млн; под ключ от 2,03 млн</td><td>Без предоплаты; доставка до 500 км</td><td>Сайт был недоступен при проверке 10.09; гарантия 1–2 года; штат 0</td><td>ООО «Каркасник»<br>ИНН 5313015692</td><td>0,05 млн (2025)</td><td>0 (2025)</td><td>Кудряшов А.А. (50%) + Бойцов (50%)</td><td>МСК + 20 регионов · 2021</td><td><a href="https://t.me/OOO_Karkasnik">TG (контакт)</a><br>MAX — ссылка с сайта</td><td>—</td></tr>
+<tr><td>8</td><td><b>Tesla House</b></td><td>tesla-house.ru</td><td>Каркас; комплектации Комфорт/Термо/Tesla</td><td>Ипотека от 4,7%</td><td>Свой кредитный отдел; одобрение за 3 дня; эскроу</td><td>Привязка по ИНН и адресу с Домклика (прямого упоминания бренда нет); убыток −14 млн (2025)</td><td>ООО «АПС СМУ»<br>ИНН 7723906897</td><td>56 млн (2025)</td><td>0 (2025)</td><td>Просветов В.С. (100%)</td><td>МСК+СПБ+ЕКБ · 2014</td><td><a href="https://vk.com/public214228233">VK</a><br><a href="https://www.youtube.com/@TESLA-HOUSE">YouTube</a><br>TG — канала нет</td><td>Домклик 2 515; Карты МСК 5,0 (62)</td></tr>
+<tr><td>9</td><td><b>Наш Домстрой</b></td><td>nashdomstroi.ru</td><td>Типовые каркасные; сроки 1–2 мес</td><td>2,35–2,38 млн; от 26 000 ₽/м²</td><td>Ипотека 6%; кредит под залог авто</td><td>Гарантия, год, число домов на сайте отсутствуют</td><td>ООО «Наш Дом Строй»<br>ИНН 5040172622</td><td>193 млн (2025)</td><td>10 (2025)</td><td>Ситнов Д.А. (50%) + Цыбуленко (50%)</td><td>МСК+МО · 2021</td><td><a href="https://t.me/CKnashdomstroi">TG · 965</a><br><a href="https://vk.com/nashdomstroi">VK</a><br><a href="https://www.youtube.com/@nashdomstroi">YouTube</a></td><td>—</td></tr>
+<tr><td>10</td><td><b>СтройМир</b></td><td>stroymir53.ru</td><td>Только дерево (брус, бревно, каркас); 200+ проектов</td><td>1,55–4,72 млн</td><td>Фикс смета; эскроу через Сбер/ВТБ/Альфа</td><td>Страница гарантии — 404; 150+ видео, 450+ фото; налогов. задолженность, блокировки счетов</td><td>ООО СК «Строймир»<br>ИНН 5300003139</td><td>36 млн (2025, +23%)</td><td>8 (2025)</td><td>Виноградова А.А. (100%)</td><td>МСК (Синдика) · 2022</td><td><a href="https://t.me/STROYMIR_53">TG · 689</a><br><a href="https://vk.com/stroymir_53">VK</a><br><a href="https://www.youtube.com/@Stroymir53">YouTube</a></td><td>—</td></tr>
+<tr><td>11</td><td><b>Строй и Живи</b></td><td>сиж.рф</td><td>74 проекта; 3 000+ решений в магазине; свое производство</td><td>1,51–6,7 млн</td><td>Гарантия 20 лет; архитектор в штате</td><td>Ежедневные фото и видео со строек; офис Выборгское 212</td><td>ООО «СТРОЙ И ЖИВИ»<br>ИНН 7842120005</td><td>50,1 млн (2025)</td><td>4 (2025)</td><td>Касумов А.Т. (51%) + еще 2</td><td>СПБ+МСК · 2016</td><td><a href="https://www.youtube.com/@stroyizhivi">YouTube · ~515K</a><br><a href="https://vk.ru/stroyizhivi">VK · 78 402</a><br><a href="https://t.me/sig2015">TG · 6,44K</a></td><td>Карты СПБ 4,7 (240)</td></tr>
+<tr><td>12</td><td><b>Сканди ЭкоДом</b></td><td>scandiecodom.ru</td><td>164 проекта; барнхаусы и фахверки</td><td>От 4,95 млн; Барн 105 м² — 5,69 млн</td><td>Гарантия 20 лет</td><td>Верхний сегмент</td><td>ООО «РУСПРОДУКТ»<br>ИНН 7842518460</td><td>159,8 млн (2025)</td><td>5 (2025)</td><td>Храбрых А.Ю. (100%)</td><td>СПБ · 2014</td><td><a href="https://vk.com/scandiecodom">VK · 10 273</a><br><a href="https://www.youtube.com/@scandiecodom">YouTube · 532</a><br><a href="https://t.me/scandiecodom">TG</a></td><td>Карты 4,8 (89)</td></tr>
+<tr><td>13</td><td><b>Багров-Строй</b></td><td>bagrovstroy.ru</td><td>60+ каркасных; фильтр-каталог на 100+ тегов</td><td>От 0,63 млн (эконом-комплектации)</td><td>Акция «бытовка в подарок»; ипотека от 9%; гарантия 5 лет</td><td>ООО ЛИКВИДИРОВАНО 25.09.2025; сайт активен — договоры идут мимо него</td><td>ООО «БАГРОВСТРОЙ»<br>ИНН 5313015325</td><td>~0 (2024)</td><td>1 (2024)</td><td>Багров Д.В. (100%)</td><td>18 регионов · 2019</td><td><a href="https://www.youtube.com/channel/UCaxfVmAD-ChQj7vA6QitkNQ">YouTube · 26,8K</a><br><a href="https://vk.ru/bagrovstroy">VK · 18 231</a><br><a href="https://t.me/bagrovstroy">TG</a></td><td>Карты 4,3 (51)</td></tr>
+<tr><td>14</td><td><b>СПБКД</b></td><td>spbkd.ru</td><td>450+ проектов; финский каркас</td><td>84 м² — 2,3 млн; 204 м² — 4,42 млн</td><td>Фикс цены в договоре; ипотека, маткапитал</td><td>Калькулятор; выручка −42%, убыток −6,4 млн (2025)</td><td>ООО «ПЕТЕРБУРГСКИЕ КАРКАСНЫЕ ДОМА»<br>ИНН 7810821706</td><td>63,8 млн (2025)</td><td>2 (2025)</td><td>Чижик А.И. (50%) + Орлов (50%)</td><td>СПБ · 2011</td><td><a href="https://vk.ru/spbkd">VK</a></td><td>Карты 4,7 (43); Домклик 4,8 (3 отзыва)</td></tr>
+<tr><td>15</td><td><b>ЛенСтройДом</b></td><td>lenstroydom.ru</td><td>Каркас + брус; СНИП СП 31-105-2002</td><td>1,39–7,3 млн (цены со скидкой на сайте)</td><td>Аккредитация Сбера; оплата 10/60/30</td><td>Нулевая выручка с 2021 при активных продажах; офис Выборгское 212</td><td>ООО «СК ЛЕНСТРОЙДОМ»<br>ИНН 7810392800</td><td>0 (2025)</td><td>1 (2025)</td><td>Антонищак Л.И. (100%)</td><td>СПБ · 2015</td><td><a href="https://www.youtube.com/@LENSTROYDOM">YouTube · 91,4K</a><br><a href="https://vk.ru/lenstroydom">VK · 53 675</a><br><a href="https://t.me/lenstroydomspb">TG</a></td><td>Карты 4,3 (106)</td></tr>
+<tr><td>16</td><td><b>ПЗСК</b></td><td>1zsk.ru</td><td>Каркас + брус; 200+ проектов</td><td>От 2,22 млн</td><td>—</td><td>Ниша — документы для СНТ/ДНП; выручка −66% (2025)</td><td>ООО «ПЗСК»<br>ИНН 7810901856</td><td>43,0 млн (2025)</td><td>3 (2025)</td><td>Чижов А.С. (100%)</td><td>СПБ+ЛО · 2020</td><td><a href="https://vk.ru/1zskstroy">VK · ~980</a></td><td>Карты 4,6 (62)</td></tr>
+<tr><td>17</td><td><b>Избург</b></td><td>izburg.ru</td><td>Финская технология; типовые + индивидуальные</td><td>Сканди 161 — 6,49 млн</td><td>Гарантия 10 лет; сервисное сопровождение</td><td>ОКВЭД — консалтинг, не строительство; офисы Лахтинский 85 и пр. Мира 102</td><td>ООО «ИЗБУРГ»<br>ИНН 7802766900</td><td>10 млн (2025)</td><td>5 (2025)</td><td>Мозговой Д.В. (57,5%) + Кадуков (42,5%)</td><td>СПБ+МСК · 2011</td><td><a href="https://t.me/IZBURG">TG · 8 453</a><br><a href="https://vk.com/izburg">VK</a><br><a href="https://www.youtube.com/channel/UCChx2At82xIfIXlEjd69Vnw">YouTube</a><br><a href="https://dzen.ru/izburg">Дзен</a></td><td>Карты 4,7 / 4,9; Домклик — положит.</td></tr>
+<tr><td>18</td><td><b>Столетие</b></td><td>skstoletie.ru</td><td>244 проекта в фильтре</td><td>1,0–4,46 млн</td><td>Гарантия 5 лет; компенсация за срыв срока; фикс цены</td><td>1 сотрудник при 14 млн; офисы Мега Дыбенко + Парнас</td><td>ООО «СК СТОЛЕТИЕ»<br>ИНН 7810976080</td><td>14 млн (2025)</td><td>1 (2025)</td><td>Непомнящая К.Ю. (100%)</td><td>СПБ · 2023</td><td><a href="https://t.me/skstoletie">TG · 538</a><br><a href="https://vk.com/skstoletie">VK</a><br><a href="https://dzen.ru/skstoletie">Дзен</a></td><td>Карты 4,9 (210)</td></tr>
+<tr><td>19</td><td><b>Класс Хаус</b></td><td>class-house.ru</td><td>Каталог; проект с расчетом нагрузок</td><td>Москва 92 м²: тепло 3,97 + инженерия 1,62 + отделка 0,62 млн</td><td>Гарантия 5 лет; экскурсии; фотоотчеты</td><td>36 сделок по эскроу; прибыль 30 млн (2025)</td><td>ООО «СККХ»<br>ИНН 7840095917</td><td>206 млн (2025, +212%)</td><td>4 (2025)</td><td>Смородин П.Н. (50%) + Конюх (50%)</td><td>СПБ · 2021</td><td><a href="https://t.me/klasshouse">TG · 1 641</a><br><a href="https://vk.com/klass.house">VK</a><br><a href="https://www.youtube.com/channel/UCcZKsjf_H5ffK_4p3jwBaSg">YouTube</a><br><a href="https://ok.ru/group/63361648361523">OK · 59</a></td><td>Карты 5,0 (103)</td></tr>
+<tr><td>20</td><td><b>Семья Строй</b></td><td>semia-stroy.ru</td><td>143 каркасных + 24 финских; 153 объекта на карте</td><td>2,19–3,45 млн</td><td>9 подарков до 31.10; 0% предоплаты</td><td>ИП, отчетности нет; живые просмотры домов</td><td>ИП Федоров А.В.<br>ИНН 531312838579</td><td>—</td><td>—</td><td>Федоров А.В. (ИП)</td><td>СПБ+РФ · 2017</td><td><a href="https://vk.ru/club134523577">VK</a><br><a href="https://www.youtube.com/channel/UCGI5qv7I2cqpEfr6WhFijDg">YouTube</a></td><td>Карты 4,8 (43); Домклик 5,0 (6)</td></tr>
+<tr><td>21</td><td><b>СтройКомфорт</b></td><td>domakarkas.ru</td><td>—</td><td>Цены не сняты</td><td>—</td><td>0 сотрудников в 2025; смена директора; не путать со СтройДомКомфорт</td><td>ООО «СТРОЙКОМФОРТ»<br>ИНН 7842147857</td><td>46 млн (2025, +436%)</td><td>0 (2025)</td><td>Смирнов Н.О.</td><td>СПБ · 2018</td><td><a href="https://t.me/stroycomfort">TG · 387</a><br><a href="https://vk.com/stroykomfort0">VK</a><br><a href="https://www.youtube.com/channel/UCqrzuINCctG6GbF3MnmaXrA">YouTube</a></td><td>Карты 4,9 (99)</td></tr>
+<tr><td>22</td><td><b>СтройДомКомфорт</b></td><td>stroy-dc.ru</td><td>Дачные, каркасные</td><td>—</td><td>—</td><td>ИП, отчетности нет; одноэтажник 9×12 хвалят</td><td>ИП Гоголин Ю.В.<br>ИНН 781100385282</td><td>—</td><td>—</td><td>Гоголин Ю.В. (ИП)</td><td>ЛО · 2009</td><td>На сайте нет</td><td>Карты 4,7 (92)</td></tr>
+<tr><td>23</td><td><b>Тёплый Угол (мы)</b></td><td>sk-tu.ru</td><td>175 каркасных; раздел для жизни — 174</td><td>3,96–6,99 млн; ДК-68 — 5,29 млн</td><td>Эскроу; фикс сметы; гарантия 15 лет</td><td>Смена директора в 2026 (бывший — Идрисов); калькулятор работает</td><td>ООО «ТЁПЛЫЙ-УГОЛ»<br>ИНН 4703168597</td><td>79,8 млн (2025, −34%)</td><td>10 (2025)</td><td>Идрисов М.Г. (учр.); дир. Гаврилова Н.А.</td><td>МСК+СПБ · 2019</td><td><a href="https://t.me/sk_tu">TG · 1 081</a><br><a href="https://vk.com/sk_tu">VK</a><br><a href="https://www.youtube.com/channel/UCrRZpfBI0euPxWFgpAWua3w">YouTube</a></td><td>Проверить вживую</td></tr>
+<tr><td>24</td><td><b>СК-Апрель</b></td><td>sk-aprel.ru</td><td>Каркасные, брус, коттеджи, бани; 100+ проектов</td><td>По запросу</td><td>Без предоплаты; бесплатное ипот. сопровождение; оплата при завозе</td><td>ВЦ Котельники вл.7/7; Рязань</td><td>ООО «СК-Апрель»<br>ИНН не снят</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://vk.com/companyaprel">VK</a><br><a href="https://www.youtube.com/@SKAprel">YT</a><br><a href="https://rutube.ru/channel/58092841/">Rutube</a></td><td>—</td></tr>
+<tr><td>25</td><td><b>СК-Теремок</b></td><td>sk-teremok.ru</td><td>Брус, каркас, барн, бани</td><td>Воронеж 48 м² — 0,881 млн; Маяк 160 м² — 2,005 млн</td><td>Рассрочка; маткапитал; ипотека от 3,5%</td><td>Каширка 63к1; Новорязанское ш.</td><td>ООО «Мастерок»<br>ИНН 9709073358</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://vk.com/sk.teremok">VK</a></td><td>—</td></tr>
+<tr><td>26</td><td><b>Брус-Дома</b></td><td>brus-doma.com</td><td>Каркас (К-1…К-30), брус, срубы, бани</td><td>Каркас от 0,419 млн; К-1 — 1,02 млн; бани от 0,26 млн</td><td>Кредит частями; маткапитал</td><td>Демпинг витрины</td><td>—</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://vk.com/public176355147">VK</a><br><a href="https://t.me/brusdoma">TG</a></td><td>—</td></tr>
+<tr><td>27</td><td><b>ДомДомино</b></td><td>domdomino.ru</td><td>Модульные, дачные, садовые, хозблоки; 920+ в каталоге</td><td>Садовые от 0,146 млн; модульные от 0,277 млн; каркас от 1,18 млн</td><td>Без предоплаты до 700 тыс; рассрочка 9 мес без банка</td><td>4500+ построено; 200 комплектов/мес</td><td>—</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://vk.com/domdominomsk">VK</a><br><a href="https://t.me/domdomino_ru">TG</a></td><td>—</td></tr>
+<tr><td>28</td><td><b>Дома от Михалыча</b></td><td>дома-от-михалыча.рф</td><td>Каркас, брус, бревно, модульные, бани</td><td>Ломоносов — 2,322 млн; Барнхаус — 4,224 млн</td><td>Каркас и софит в подарок; ипотека 6%</td><td>Региональный (Н.Новгород), не Москва</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Н.Новгород · —</td><td><a href="https://vk.com/doma.nnov">VK</a></td><td>—</td></tr>
+<tr><td>29</td><td><b>ДБрус</b></td><td>dbrus.ru</td><td>Только каркас; ~90 названий; 1100+ домов</td><td>Кедр 56 м² — 3,47 млн; Люксембург 96 м² — 5,22 млн</td><td>−5% наличные до 11.2026; −200 тыс; эскроу, 4 банка; ~15 574 ₽/мес</td><td>Онлайн-трансляции 7 строек; Каширка 63к1</td><td>ООО «ДБРУС»<br>ИНН 7751199086</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://t.me/dbrussk">TG</a><br><a href="https://www.youtube.com/@dbrus">YT</a></td><td>—</td></tr>
+<tr><td>30</td><td><b>Нархозстрой</b></td><td>narhozstroy.ru</td><td>Клееный брус, камень, фахверк; 750 000 м²</td><td>По запросу</td><td>100% фиксация цены</td><td>Свой завод; Москва-Сити + Симбухово</td><td>ООО «СК-Дельта»<br>ИНН 4025448240</td><td>—</td><td>—</td><td>—</td><td>МСК · —</td><td><a href="https://vk.com/club_narhozstroy">VK</a></td><td>—</td></tr>
+<tr><td>31</td><td><b>Ривьера</b></td><td>gcriviera.ru</td><td>Участки + дома (каркас 1 из 5)</td><td>72 м² — 7,5 млн; Шале — 8,9 млн; от 110 тыс/сотка</td><td>−50 тыс наличные; рассрочка 18 мес; ипотека от 3%</td><td>Продает ИП без видимой выручки</td><td>ИП Зыонг Ти Киен<br>ИНН 780108419407</td><td>—</td><td>—</td><td>—</td><td>СПБ · 2016</td><td><a href="https://t.me/gcriviera">TG 40</a><br><a href="https://vk.com/gcriviera">VK</a></td><td>—</td></tr>
+<tr><td>32</td><td><b>КСК Хаус</b></td><td>kskhouse.ru</td><td>Сканд. каркас + газобетон; 40+ проектов</td><td>№3.1 158 м² — 11,15 млн; HYTTE 89 м² — 4,15 млн</td><td>Спеццена «Теплый контур»</td><td>Расхождение юрлиц на сайте; Москва + СПб</td><td>ООО «Загородный дом»<br>ИНН 7816589471</td><td>208 млн (2025)</td><td>13 (2025)</td><td>Паршиков + Ивакин</td><td>СПБ · 2014</td><td><a href="https://t.me/kskhouse">TG 2 099</a></td><td>—</td></tr>
+<tr><td>33</td><td><b>АПС ДСК</b></td><td>aps-dsk.ru</td><td>Клееный брус, комбинированные; 500+ проектов, 3500+ домов</td><td>Не показаны</td><td>Покраска в подарок (сентябрь); рассрочка 0%; ипотека 6%, эскроу</td><td>Выручка СЗ −68%</td><td>АПС ДСК Северо-Запад<br>ИНН 7839088993</td><td>62 млн (2025)</td><td>—</td><td>Кальсин 85%</td><td>СПБ · 2017</td><td>TG · VK · TikTok</td><td>—</td></tr>
+<tr><td>34</td><td><b>ЭкоБрус</b></td><td>каркасный-дом-подключ.рф</td><td>Финский каркас 223 мм; 157 проектов</td><td>За лид-формой</td><td>Подарки до 31.10; кредит без ставок</td><td>Без предоплаты; 14 дней</td><td>ООО «Экобрус»<br>ИНН 7805688110</td><td>—</td><td>—</td><td>Афанасьев Ю.А.</td><td>СПБ · 2016</td><td>—</td><td>—</td></tr>
+<tr><td>35</td><td><b>СК Империя</b></td><td>sk-imperiya.ru</td><td>Каркас/брус/бани/мобильные бани</td><td>Весна 60 м² — 1,343 млн; Пигмалион 96 м² — 2,015 млн</td><td>Цоколь в подарок; маткапитал</td><td>«С 2011» при ООО 2021; Мега Дыбенко</td><td>ООО «СК Империя»<br>ИНН 7842195018</td><td>20,7 млн (2025)</td><td>5 (2025)</td><td>Патенко Ю.В.</td><td>СПБ · 2021</td><td><a href="https://vk.com/skimperiya">VK</a></td><td>—</td></tr>
+<tr><td>36</td><td><b>СВОЙ</b></td><td>spb.svoi.house</td><td>Каркас/панели/газобетон/мини-брус</td><td>Не показаны</td><td>Выгода до 1,096 млн (было до 31.08); ипотека от 0,1%; эскроу</td><td>10 арбитражей на 56 млн</td><td>ООО «СВОЙ»<br>ИНН 7811534768</td><td>186 млн (2025, +103%)</td><td>12 (2025)</td><td>Снопков Д.О. (100%)</td><td>СПБ · 2012</td><td><a href="https://t.me/svoihouse_spb">TG 582</a><br><a href="https://vk.com/svoi.house">VK</a></td><td>—</td></tr>
+<tr><td>37</td><td><b>Хаус-Строй</b></td><td>house-stroy.ru</td><td>Брус 141 / каркас ~145 / барн / бани 44</td><td>Геба 4×6 — 0,513 млн; Казань — 1,551 млн</td><td>Дверь и доска в подарок; −30 тыс (дедлайны висят просроченные)</td><td>«С 2004» при ООО 2020</td><td>ООО «Строй-Центр»<br>ИНН 7838091834</td><td>~52 млн (2025, −40%)</td><td>—</td><td>—</td><td>СПБ · 2020</td><td><a href="https://vk.com/house_stroy">VK</a></td><td>—</td></tr>
+<tr><td>38</td><td><b>СК Домострой</b></td><td>spb.sk-domostroi.ru</td><td>Каркас 80 / бани / гаражи</td><td>Громов 54 м² — 1,57 млн; Гагарин 68 м² — 2,16 млн</td><td>Кредит без ставок; эскроу не упомянут</td><td>Выручка ×132 с нуля; аресты/ИП</td><td>ООО «СК Домострой»<br>ИНН 5321188755</td><td>13,3 млн (2025)</td><td>7–8</td><td>Некрасов + Ментюков</td><td>СПБ · 2017</td><td><a href="https://t.me/sk_domostroi">TG 257</a></td><td>—</td></tr>
+<tr><td>39</td><td><b>СПБ-Дома</b></td><td>spb-doma.ru</td><td>Каркас 246 / брус 115 / срубы / коттеджи</td><td>Бойково — 3,413 млн; Удача — 5,192 млн</td><td>Метки «акция», «только в июле» (без года); льготная от 6%</td><td>Три гарантии 7/15/5; выручка −67%</td><td>ООО «Стройкомфорт»<br>ИНН 7804565116</td><td>23,7 млн (2025)</td><td>—</td><td>Харьков А.С.</td><td>СПБ · 2016</td><td>TG · WhatsApp</td><td>—</td></tr>
+<tr><td>40</td><td><b>Глав-Метр</b></td><td>glav-metr.ru</td><td>Каркас под ключ</td><td>От 37 000 ₽/м², построчных нет</td><td>Подарки «до конца июня/сентября» одновременно</td><td>Юрлица нет; гарантии 10/5</td><td>—</td><td>—</td><td>—</td><td>—</td><td>СПБ · —</td><td><a href="https://t.me/glavmetr">TG 20</a></td><td>—</td></tr>
+</tbody></table></div>
+<div class="tip">Выручка и штат — Rusprofile, отчетность 2025 (02.10.2026); 2024 скрыт — «—». Соцсети: название и ссылка — с официальных сайтов, подписчики — как показано источником 02.10.2026; где счетчик недоступен (VK-антибот, YouTube без JS) — только ссылка. Привязка Tesla House к «АПС СМУ» — по ИНН/адресу, без прямого упоминания.</div></section>
+
+<section id="map"><h3><span class="num">03</span>Карта конкурентов</h3><p class="desc">Матрица «цена × специализация». Ячейка следует из карточки компании, внутри — по алфавиту. Выдуманных координат нет.</p>
+<div class="matrix" id="posmap" style="min-height:0">
+</div>
+<div class="legend"><span><span class="dot" style="background:#a4132e"></span>Высокая угроза</span><span><span class="dot" style="background:#5b4bc4"></span>Средняя</span><span><span class="dot" style="background:#68727f"></span>Низкая</span></div>
+<div class="tip">Клик по названию — показать профиль ниже. Цвет дублируется подписью угрозы в профиле.</div>
+</section>
+
+<section id="profiles"><h3><span class="num">04</span>Профили конкурентов (39)</h3><p class="desc">Краткая карточка по каждому. Раскрывается кнопкой. Полные разборы десятки Москвы — в файле REPORT.md.</p>
+<div class="controls"><input id="pq" placeholder="Поиск по профилям…" aria-label="Поиск по профилям"><select id="pcity" aria-label="Фильтр по городу"><option value="">Все города</option><option>МСК</option><option>СПБ</option><option>МСК+СПБ</option></select></div>
+<div class="cards" id="pcards"></div></section>
+
+<section id="offer"><h3><span class="num">05</span>Предложения конкурентов</h3><p class="desc">Глубинный съем страниц 02.10.2026: главная + каталог + карточка. Только увиденное; «не найдено» — значит нет на просмотренных страницах.</p>
+<div class="tblwrap"><table><thead><tr><th>Компания</th><th>Проекты и цены</th><th>Акции и дедлайны</th><th>Ипотека / эскроу</th><th>Гарантия</th><th>Сроки</th><th>Квиз / калькулятор</th><th>Формы заявки</th><th>Источник</th></tr></thead><tbody>
+<tr><td><b>Канадская изба</b></td><td>Эрвин 208 м² — 7,603 млн; Борг 181,6 м² — 7,235 млн; Парма 124 м² — 4,701 млн</td><td>«Только до 31 октября»; фундамент+окна+кровля в подарок; СВО −5%</td><td>От 6%; семейная 6% «до 1.10.2026»; льготная 8%; IT 5%; до 30 млн</td><td>15 лет</td><td>Под ключ от 3 мес.</td><td>Не найден</td><td>Звонок (имя+телефон)</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Лидер дач</b></td><td>Мираж 70 м² — 3,55 млн (платеж 21 078 ₽/мес); Барн-6 150 м² — 5,9 млн; Эстет 50 м² — 2,55 млн</td><td>«Только до 31 октября» на карточке</td><td>Семейная 6%; IT 6%; эскроу; рассрочка 0%</td><td>Лет не указано</td><td>45–60 дней</td><td>Квиз 7 шагов; ипот. калькулятор; каталог 2026 за контакт</td><td>Звонок, расчет, каталог, экскурсия</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ГДВЛ</b></td><td>Не снято — сайт закрыт капчей</td><td>Не снято</td><td>Не снято</td><td>15 лет (сверка 10.09)</td><td>Не снято</td><td>Не снято</td><td>Не снято</td><td>Сверка 10.09</td></tr>
+<tr><td><b>Теремъ</b></td><td>Добрыня: каркас от 4,517 / 4,868 / 5,136 млн; «Выгода недели»</td><td>Клуб друзей; «Фундамент сейчас — дом потом»; достройка −25%</td><td>Семейная 6% по эскроу; кредит 12,5% без ПВ</td><td>25 лет (брус)</td><td>Не найдено</td><td>Нет; фильтры + «Рассчитать проект»</td><td>6+ форм: звонок, экскурсия+такси, проект, кредит</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Дачный сезон</b></td><td>Эвери 86 м² — 4,746 млн; Дерби 114 м² — 5,744 млн; каркас от 39 990 ₽/м²</td><td>«Цена с 1 ноября» (повышение); скидки до 10%; аэродверь в подарок</td><td>От 6,1%; рассрочка 2 года; маткапитал</td><td>До 15 лет</td><td>Не найдено</td><td>Калькулятор; расчет в карточке</td><td>Звонок, расчет, личный кабинет</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Домок</b></td><td>Тим 6×7 — 2,669 млн (2,349 свои); Барнева — 3,643 млн; Тим 8×12 — 5,559 млн</td><td>Скидка 16% (Компакт); бесплатная доставка; дедлайнов нет</td><td>Ипотека 6%; эскроу; отдельная цена по ипотеке</td><td>Не найдено</td><td>Не найдено</td><td>Выбор комплектации + платные допы</td><td>Заявка, звонок, корзина</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Каркасник</b></td><td>КД158 81 м² — 2,438 / 4,775 млн; КД165 28 м² — 1,014 / 2,032 млн</td><td>Дедлайнов нет</td><td>Сбер; без предоплаты 70/30; маткапитал</td><td>Фундамент 5 лет; сборка 1–2 года</td><td>С менеджером</td><td>Калькулятор стройки + в проекте</td><td>Звонок, MAX/TG</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Tesla House</b></td><td>Цен «проект—цена» нет; Миракл ПВ от 1,778 млн (≈42 тыс/мес); Little от 1,098 млн</td><td>Дедлайнов нет</td><td>От 6%; IT 6%; семейная; эскроу; форма «от 4,7%»</td><td>«Длительная», без лет</td><td>30–90 дней</td><td>Нет; сметы на e-mail</td><td>Заявка, смета, ипотека</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Наш Домстрой</b></td><td>Сказка — 2,346 млн; Мечта — 2,381 млн; 4 комплектации до 4,299 млн</td><td>Антикризисное; кредит от 13%; под залог авто; от 26 000 ₽/м²</td><td>Семейная 6%; банки-партнеры</td><td>Не найдено</td><td>30–40 дней</td><td>Нет; фильтр + «Заказать»</td><td>Звонок, заявка + инженерия</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СтройМир</b></td><td>К-1 72 м² — 2,502 млн; К-2 99 м² — 3,534 млн; К-8 — 2,969 млн</td><td>6 подарков, без дедлайна</td><td>Эскроу; Сбер/ВТБ/Альфа; оплата 10/70/20</td><td>Раздел есть, срок не зафиксирован</td><td>Средняя 24 дня</td><td>Расчет + конструктор; перепланировка бесплатно</td><td>Звонок, экскурсия, фикс цены</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Строй и Живи</b></td><td>Дубровка 89 м² — 2,741 млн; Лосево 51 м² — 1,856 млн; Пульман 190 м² — 4,788 млн</td><td>Поп-ап «Ипотека на ИЖС в октябре»; каталог за e-mail; дедлайнов скидок нет</td><td>От 6%; семейная с эскроу 6%; ПВ от 10%; калькулятор</td><td>20 лет + постгарантия</td><td>Не найдено</td><td>Ипот. калькулятор; фильтры; PDF за e-mail</td><td>Консультация, звонок, подписка, поп-ап</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Сканди ЭкоДом</b></td><td>КД-1240 141 м² — 7,9 / 9,4 / 10,54 млн (3 компл.); КД-1230 — 5,693 млн; от 4,95 млн (≈23 800 ₽/мес)</td><td>−10% за свои + фиксация цены; дедлайн не найден</td><td>Семейная до 6% с эскроу; Сбер/ВТБ/ДОМ.РФ и др.; транши</td><td>20 лет работы; до 50 лет материалы</td><td>4–5 мес.</td><td>PDF-каталог за контакт; визуализация дома</td><td>Смета, каталог, экскурсия, ипотека</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Багров-Строй</b></td><td>Конрад 58 м² — от 0,895 млн без отделки / 1,764 млн с отделкой; Добрыня — от 0,861 млн</td><td>Подарок после расчета доставки; дедлайны не найдены</td><td>Ипотека возможна; маткапитал; эскроу не найдено</td><td>1 год (скрытые дефекты)</td><td>Под ключ 12–25 дней; дата готовности на карточке</td><td>Конфигуратор; бесплатный расчет</td><td>Расчет, вопросы, экскурсия</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СПБКД</b></td><td>Кайгас 84 м² — 2,299 / 3,914 / 4,845 млн (3 компл.); Оржицы 204 м² — от 4,417 млн</td><td>«Проект в подарок»; дедлайны не найдены</td><td>Сбер-партнер; ипотека/кредит/маткапитал</td><td>«На все работы», лет нет</td><td>От 30 дней</td><td>Калькулятор 7 шагов</td><td>Письмо, звонок, 1 клик, расчет</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ЛенСтройДом</b></td><td>Калевала 108 м² — 4,24 → 3,755 млн; Сканди-Мини 54 м² — 1,896 млн</td><td>Зачеркнутые цены; дедлайны не найдены</td><td>Аккредитован Сбером; госпрограммы; оплата 10/60/30</td><td>«Расширенная», лет нет</td><td>«Дом за 30 дней»</td><td>Marquiz-поп-ап</td><td>Телефон, e-mail</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ПЗСК</b></td><td>ДК-59 48 м² — 2,22 млн; ДК-60 128 м² — 3,565 млн; под ключ от 2,47 млн</td><td>Акция до 31 июля (прошла); проект в подарок (+180 тыс)</td><td>Эскроу Сбер; семейная от 6%; ипот. калькулятор (≈23 949 ₽/мес за 5 млн)</td><td>От 5 лет (5–8 по компл.)</td><td>70 дней (карточки 130–180)</td><td>Квиз 7 вопросов; калькулятор</td><td>Расчет, смета, выезд, ипотека</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Избург</b></td><td>Сканди 161 — от 10,039 млн; Сканди 200 — от 11,86 млн; Сканди 251 — от 18,29 млн</td><td>Не найдено</td><td>Ипотека, сопровождение; ставки не найдены</td><td>10 лет</td><td>Не найдено</td><td>Нет (аудит участка, 3D-тур)</td><td>Телефон, e-mail, TG</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Столетие</b></td><td>ДК-194 88 м² — 2,992 млн; ДК-202 110 м² — 3,189 млн; 1-эт от 1,201 млн</td><td>Раздел «АКЦИИ» не раскрыт; дедлайны не найдены</td><td>Кредит и ипотека с эскроу; ставки не найдены</td><td>5 лет</td><td>60–90 дней</td><td>Нет (фильтры каталога)</td><td>Расчет, договор, ипотека, экскурсия</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Класс Хаус</b></td><td>Москва 92 м² — 3,97 + инженерия 1,62 + отделка 0,62 млн; Валенсия — 3,62 млн</td><td>Не найдено</td><td>Сбер/ДОМ.РФ/ВТБ, эскроу; от 6%; одобрение 24 ч</td><td>5 лет</td><td>~100 дней</td><td>«Рассчитайте проект»</td><td>Заявка, звонок, ипотека</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Семья Строй</b></td><td>Фламенго 72 м² — 3,203 / 3,685 / 3,752 млн; Тройка — 2,21 млн</td><td>До 31.10: 6 подарков; металлочерепица от 570 тыс; доставка 500 км</td><td>Кредит онлайн; 0% предоплаты; ставки не найдены</td><td>1–5 лет</td><td>Не найдено</td><td>Конструктор окраски; длинная форма расчета</td><td>Экскурсия, проект на расчет</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СтройКомфорт</b></td><td>КД-118 117 м² — 3,329 млн; КД-82 — 2,771 / 3,65 / 4,421 млн; сваи от 158 тыс</td><td>«Предложения октября»: выгода 124–174 тыс; без числа-дедлайна</td><td>Эскроу от 6%, до 30 лет; Сбер/ВТБ/ДОМ/Альфа</td><td>Число не найдено</td><td>Дома до 60 дней</td><td>Конструктор цвета; подбор экспертом</td><td>Перезвон, экскурсия, свой проект</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Тёплый Угол</b></td><td>ДК-68 105 м² — 5,29 млн; ДК-206 80 м² — 3,957 млн</td><td>На карточках «нет скидок»</td><td>Ипотека с эскроу; фикс сметы</td><td>15 лет</td><td>Не снималось</td><td>Калькулятор работает; квиза нет</td><td>Заявка, звонок</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СК-Апрель</b></td><td>Цены не выведены («Узнайте цену»)</td><td>Сопровождение ипотеки бесплатно; семейная с эскроу</td><td>Семейная от 6%; стандарт от 30,3%; маткапитал</td><td>Не найдено</td><td>От 1 дня; без предоплаты</td><td>Нет</td><td>Консультация, цена под ключ</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СК-Теремок</b></td><td>Воронеж 48 м² — 0,881 млн; Маяк 160 м² — 2,005 млн; бани от 0,599 млн</td><td>Рассрочка; маткапитал; дедлайнов нет</td><td>От 3,5%; субсидированная от 9,9%</td><td>15 лет</td><td>Не найдено</td><td>Калькулятор стройки</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Брус-Дома</b></td><td>Каркас от 0,419 млн; К-1 — 1,02 млн; бани от 0,26 млн</td><td>Не найдено</td><td>Кредит частями; маткапитал</td><td>5 лет</td><td>Не найдено</td><td>Нет</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ДомДомино</b></td><td>Садовые от 0,146 млн; модульные от 0,277 млн; каркас от 1,18 млн</td><td>Фундамент/сборка в подарок; без предоплаты до 700 тыс</td><td>Домклик; рассрочка 9 мес без банка</td><td>Без лет</td><td>Хозблок за 1 день</td><td>Нет</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Дома от Михалыча</b></td><td>Ломоносов — 2,322 млн; Барнхаус — 4,224 млн; Томсон — 1,834 млн</td><td>Каркас и софит в подарок; дедлайнов нет</td><td>Ипотека 6%; эскроу не подтвержден</td><td>5 лет</td><td>Не найдено</td><td>Калькулятор</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ДБрус</b></td><td>Кедр 56 м² — 3,47 млн; Люксембург 96 м² — 5,22 млн; Рублево — 10,17 млн</td><td>−5% наличные до 11.2026; −200 тыс; подарки</td><td>Семейная от 6%; IT от 5%; эскроу; ~15 574 ₽/мес</td><td>Не найдено</td><td>Кейсы 27–107 дней</td><td>Нет (трансляции строек)</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Нархозстрой</b></td><td>Не выведены</td><td>Не найдено</td><td>Не найдено</td><td>50 лет</td><td>Не найдено</td><td>Квиз-форма</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Ривьера</b></td><td>72 м² — 7,5 млн; Шале — 8,9 млн; участки от 110 тыс/сотка</td><td>−50 тыс наличные; рассрочка 18 мес; дедлайнов нет</td><td>От 3%; эскроу не упомянут</td><td>Не найдена</td><td>Не указаны</td><td>2 опроса</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>КСК Хаус</b></td><td>№3.1 158 м² — 11,15 млн; HYTTE 89 м² — 4,15 млн</td><td>Спеццена «Теплый контур»; дедлайнов нет</td><td>Семейная и др.; эскроу не упомянут</td><td>5 лет</td><td>Не указаны</td><td>Нет</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>АПС ДСК</b></td><td>Не показаны</td><td>Покраска в подарок (сентябрь); рассрочка 0%</td><td>Льготная 6%; эскроу; ТОП-30 Сбера</td><td>«Пожизненная»</td><td>Рекорд 24 ч 45 мин</td><td>Нет (колоризатор, VR)</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>ЭкоБрус</b></td><td>За лид-формой</td><td>Подарки до 31.10</td><td>Кредит без ставок; эскроу не упомянут</td><td>Не найдена</td><td>14 дней</td><td>Квиз 5 шагов</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СК Империя</b></td><td>Весна 60 м² — 1,343 млн; Пигмалион 96 м² — 2,015 млн</td><td>Цоколь в подарок; маткапитал</td><td>Ставки без цифр; эскроу не упомянут</td><td>Не найдена</td><td>Брус ~3 недели</td><td>Нет</td><td>Заявка с файлом</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СВОЙ</b></td><td>Не показаны</td><td>Выгода до 1,096 млн (было до 31.08)</td><td>От 0,1%; эскроу да</td><td>До 15 лет</td><td>3 месяца</td><td>Калькулятор</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Хаус-Строй</b></td><td>Геба — 0,513 млн; Казань — 1,551 млн</td><td>Подарки; −30 тыс (дедлайны висят просроченные)</td><td>Сбер; без ставок; эскроу не упомянут</td><td>Раздел есть, лет нет</td><td>Каркас 4–6 недель</td><td>Квиз 4 шага + калькулятор</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СК Домострой</b></td><td>Громов 54 м² — 1,57 млн; Гагарин 68 м² — 2,16 млн</td><td>Не найдено</td><td>Кредит без ставок; эскроу не упомянут</td><td>5 лет (каркас)</td><td>«С запасом»</td><td>Мини-форма</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>СПБ-Дома</b></td><td>Бойково — 3,413 млн; Удача — 5,192 млн</td><td>«Акция», «только в июле» (без года)</td><td>Льготная от 6%; базовая 17–19%</td><td>7/15/5 (противоречие)</td><td>От 30 дней</td><td>Калькулятор</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+<tr><td><b>Глав-Метр</b></td><td>От 37 000 ₽/м², построчных нет</td><td>Подарки «до конца июня/сентября» одновременно</td><td>Не найдено</td><td>10/5 (противоречие)</td><td>От 30 дней</td><td>Квиз 5 вопросов</td><td>Заявка</td><td>Сайт 02.10</td></tr>
+</tbody></table></div></section>
+<section id="context"><h3><span class="num">06</span>Контекстная разведка — выгрузки 02.10.2026</h3><p class="desc">Файлы из папки «к»: 3 сводных CSV конкурентов в контексте + 20 zip-досье по доменам (органика, контекст, объявления). Единицы бюджета — как в выгрузке, без перевода в рубли. ★ — новые лица, требуют профилирования.</p>
+<div class="mini"><h4>Москва — топ по бюджету в контексте</h4><div class="tblwrap"><table><thead><tr><th>Домен</th><th>Похожесть</th><th>Запросов</th><th>Объявлений</th><th>Бюджет (ед.)</th></tr></thead><tbody>
+<tr><td>home-projects.ru</td><td>9 / 181</td><td>10 267</td><td>3 891</td><td>4 537 436</td></tr>
+<tr><td>canadskaya-izba.ru</td><td>9 / 184</td><td>8 768</td><td>2 412</td><td>4 152 104</td></tr>
+<tr><td>terem-pro.ru</td><td>11 / 225</td><td>9 375</td><td>1 472</td><td>2 063 742</td></tr>
+<tr><td>brus-doma.com ★</td><td>3 / 51</td><td>1 446</td><td>368</td><td>1 662 889</td></tr>
+<tr><td>sk-aprel.ru ★</td><td>11 / 213</td><td>4 984</td><td>451</td><td>1 657 102</td></tr>
+<tr><td>domdomino.ru ★</td><td>2 / 37</td><td>5 402</td><td>1 855</td><td>1 628 769</td></tr>
+<tr><td>dom-ok.com</td><td>7 / 133</td><td>3 167</td><td>714</td><td>1 415 841</td></tr>
+<tr><td>sk-teremok.ru ★</td><td>7 / 136</td><td>2 178</td><td>741</td><td>1 185 873</td></tr>
+<tr><td>gdvl.ru</td><td>3 / 58</td><td>1 869</td><td>732</td><td>1 143 729</td></tr>
+<tr><td>msk.stroy-dc.ru (наш mapped)</td><td>4 / 79</td><td>1 302</td><td>308</td><td>1 009 594</td></tr>
+<tr><td>dbrus.ru ★</td><td>3 / 64</td><td>1 441</td><td>556</td><td>936 642</td></tr>
+<tr><td>narhozstroy.ru ★</td><td>2 / 47</td><td>2 780</td><td>1 051</td><td>824 612</td></tr>
+</tbody></table></div></div>
+<div class="mini" style="margin-top:12px"><h4>Петербург — топ по бюджету в контексте</h4><div class="tblwrap"><table><thead><tr><th>Домен</th><th>Похожесть</th><th>Запросов</th><th>Объявлений</th><th>Бюджет (ед.)</th></tr></thead><tbody>
+<tr><td>spb.home-projects.ru</td><td>25 / 131</td><td>2 777</td><td>1 258</td><td>4 876 357</td></tr>
+<tr><td>gcriviera.ru ★</td><td>11 / 58</td><td>10 631</td><td>861</td><td>4 708 638</td></tr>
+<tr><td>сиж.рф</td><td>33 / 170</td><td>2 914</td><td>1 266</td><td>3 306 764</td></tr>
+<tr><td>kskhouse.ru ★</td><td>16 / 85</td><td>3 415</td><td>312</td><td>3 324 841</td></tr>
+<tr><td>aps-dsk.ru ★</td><td>15 / 80</td><td>5 286</td><td>28</td><td>3 295 684</td></tr>
+<tr><td>каркасный-дом-подключ.рф ★</td><td>13 / 66</td><td>1 686</td><td>430</td><td>2 886 926</td></tr>
+<tr><td>sk-imperiya.ru ★</td><td>13 / 30</td><td>2 285</td><td>931</td><td>2 091 355</td></tr>
+<tr><td>spb.svoi.house ★</td><td>12 / 61</td><td>1 334</td><td>31</td><td>1 897 077</td></tr>
+<tr><td>scandiecodom.ru</td><td>6 / 32</td><td>1 283</td><td>312</td><td>1 603 031</td></tr>
+<tr><td>spb-doma.ru ★</td><td>5 / 28</td><td>381</td><td>235</td><td>1 543 179</td></tr>
+<tr><td>sk-tu.ru (мы)</td><td>9 / 46</td><td>889</td><td>250</td><td>1 296 884</td></tr>
+<tr><td>bagrovstroy.ru</td><td>4 / 23</td><td>609</td><td>249</td><td>1 264 515</td></tr>
+</tbody></table></div></div>
+<div class="mini" style="margin-top:12px"><h4>SEO-масштаб наших (запросов в органике / страниц / запросов в контексте / объявлений)</h4><div class="tblwrap"><table><thead><tr><th>Домен</th><th>Органика</th><th>Страниц</th><th>Контекст</th><th>Объявления</th></tr></thead><tbody>
+<tr><td>terem-pro.ru</td><td>22 870</td><td>1 102</td><td>9 375</td><td>1 472</td></tr>
+<tr><td>home-projects.ru</td><td>18 639</td><td>910</td><td>10 267</td><td>3 891</td></tr>
+<tr><td>karkasnik.ru</td><td>14 363</td><td>1 077</td><td>—</td><td>—</td></tr>
+<tr><td>gdvl.ru</td><td>11 871</td><td>425</td><td>1 869</td><td>732</td></tr>
+<tr><td>stroymir53.ru</td><td>10 919</td><td>715</td><td>—</td><td>—</td></tr>
+<tr><td>canadskaya-izba.ru</td><td>9 151</td><td>582</td><td>8 768</td><td>2 412</td></tr>
+<tr><td>domakarkas.ru</td><td>3 097</td><td>125</td><td>523</td><td>224</td></tr>
+<tr><td>bagrovstroy.ru</td><td>2 620</td><td>245</td><td>609</td><td>249</td></tr>
+<tr><td>stroy-dc.ru</td><td>1 911</td><td>233</td><td>383</td><td>128</td></tr>
+<tr><td>dom-ok.com</td><td>1 009</td><td>147</td><td>3 167</td><td>714</td></tr>
+<tr><td>liderdach.ru</td><td>842</td><td>77</td><td>—</td><td>—</td></tr>
+<tr><td>scandiecodom.ru</td><td>752</td><td>134</td><td>1 283</td><td>312</td></tr>
+<tr><td>skstoletie.ru</td><td>874</td><td>90</td><td>94</td><td>27</td></tr>
+<tr><td>lenstroydom.ru</td><td>648</td><td>63</td><td>—</td><td>—</td></tr>
+<tr><td>1zsk.ru</td><td>661</td><td>120</td><td>—</td><td>—</td></tr>
+<tr><td>class-house.ru</td><td>537</td><td>39</td><td>386</td><td>115</td></tr>
+<tr><td>nashdomstroi.ru</td><td>927</td><td>98</td><td>—</td><td>—</td></tr>
+<tr><td>semia-stroy.ru</td><td>347</td><td>56</td><td>—</td><td>—</td></tr>
+<tr><td>tesla-house.ru</td><td>293</td><td>65</td><td>—</td><td>—</td></tr>
+<tr><td>izburg.ru</td><td>214</td><td>26</td><td>64</td><td>13</td></tr>
+</tbody></table></div>
+<div class="tip">«—» — файла нет в архиве (контекст не снимался или нулевой). Лидер дач, Каркасник, СтройМир, Наш Домстрой, ЛенСтройДом, Семья, Tesla, 1zsk — контекстных выгрузок нет: платный поиск у них либо отсутствует, либо вне среза.</div></div>
+<div class="mini" style="margin-top:12px"><h4>Новые лица — профилированы 02.10.2026 (сайт + юрлицо + соцсети)</h4><div class="tblwrap"><table><thead><tr><th>Домен</th><th>Гео</th><th>Похожесть</th><th>Бюджет (ед.)</th><th>Объявлений</th></tr></thead><tbody>
+<tr><td>sk-aprel.ru ★</td><td>МСК</td><td>11 / 213</td><td>1 657 102</td><td>451</td></tr>
+<tr><td>sk-teremok.ru</td><td>МСК</td><td>7 / 136</td><td>1 185 873</td><td>741</td></tr>
+<tr><td>brus-doma.com</td><td>МСК</td><td>3 / 51</td><td>1 662 889</td><td>368</td></tr>
+<tr><td>domdomino.ru</td><td>МСК</td><td>2 / 37</td><td>1 628 769</td><td>1 855</td></tr>
+<tr><td>дома-от-михалыча.рф</td><td>МСК</td><td>4 / 83</td><td>593 651</td><td>536</td></tr>
+<tr><td>dbrus.ru</td><td>МСК</td><td>3 / 64</td><td>936 642</td><td>556</td></tr>
+<tr><td>narhozstroy.ru</td><td>МСК</td><td>2 / 47</td><td>824 612</td><td>1 051</td></tr>
+<tr><td>gcriviera.ru ★</td><td>СПБ</td><td>11 / 58</td><td>4 708 638</td><td>861</td></tr>
+<tr><td>kskhouse.ru ★</td><td>СПБ</td><td>16 / 85</td><td>3 324 841</td><td>312</td></tr>
+<tr><td>aps-dsk.ru ★</td><td>СПБ</td><td>15 / 80</td><td>3 295 684</td><td>28</td></tr>
+<tr><td>каркасный-дом-подключ.рф</td><td>СПБ</td><td>13 / 66</td><td>2 886 926</td><td>430</td></tr>
+<tr><td>sk-imperiya.ru</td><td>СПБ</td><td>13 / 30</td><td>2 091 355</td><td>931</td></tr>
+<tr><td>spb.svoi.house</td><td>СПБ</td><td>12 / 61</td><td>1 897 077</td><td>31</td></tr>
+<tr><td>house-stroy.ru</td><td>СПБ</td><td>8 / 41</td><td>1 144 777</td><td>368</td></tr>
+<tr><td>spb.sk-domostroi.ru</td><td>СПБ</td><td>6 / 32</td><td>773 304</td><td>15</td></tr>
+<tr><td>glav-metr.ru</td><td>СПБ</td><td>0 / 137</td><td>4 779 362</td><td>113</td></tr>
+</tbody></table></div>
+<div class="tip">★ — крупнейшие в своем гео среди новых. Похожесть 0 у glav-metr — широкий профиль, пересечение частичное.</div></div>
+</section>
+
+<footer>Источники: REPORT.md + FACTCHECK.md (10.09.2026), срезы СПБ 02.10.2026, живые сайты 02.10.2026, выгрузки контекста/SEO из папки «к» (02.10.2026: 3 CSV + 20 zip-досье). Гипотезы помечены и не выданы за факты.</footer>
+</main></div>
+<script>
+(function(){
+"use strict";
+var nav=document.querySelectorAll('#nav a');
+var secs=Array.prototype.slice.call(document.querySelectorAll('main section'));
+function onScroll(){var y=window.scrollY+160,i=0;secs.forEach(function(s,idx){if(s.offsetTop<=y)i=idx;});nav.forEach(function(a,j){a.classList.toggle('act',j===i);});}
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){window.addEventListener('scroll',onScroll,{passive:true});}
+nav.forEach(function(a){a.addEventListener('click',function(){nav.forEach(function(x){x.classList.remove('act');});a.classList.add('act');});});
+document.getElementById('burger').addEventListener('click',function(){document.body.classList.toggle('no-side');});
+var DATA=[
+{name:"Канадская изба",city:"МСК",type:"прямой",site:"canadskaya-izba.ru",price:"3,45–7,6 млн",usp:"3 мес / 15 лет / ипотека / 5 точек продаж",rating:"4,8 (390)",gar:"15 лет",threat:"Высокая",src:"Отчет + сверка 10.09 · высок.",firm:"ООО «Русское шале» · 157 млн · 11 чел. · Рожкова В.В.",soc:'<a href="https://t.me/caiz_ru">TG 570</a> · <a href="https://vk.com/caiz_ru">VK</a> · <a href="https://www.youtube.com/channel/UCHdHAX75SsApwzOjkok8tdA">YT</a>',seg:1,spec:1,px:.72,py:.30},
+{name:"ГДВЛ",city:"МСК+СПБ",type:"прямой",site:"gdvl.ru",price:"Дом Дария 5,58 млн",usp:"Эскроу / 15 лет / 448 проектов / 2 501 оценка",rating:"5,0 (236)",gar:"15 лет",threat:"Высокая",src:"Отчет + сверка · высок.",firm:"ООО «ГДВЛ» · 76 млн · 3 чел. · Казадаев Н.Ю.",soc:'<a href="https://t.me/gdvl_kanal">TG 1 285</a> · <a href="https://vk.com/gdvl_kanal">VK</a> · <a href="https://dzen.ru/gdvl">Дзен</a>',seg:1,spec:1,px:.62,py:.34},
+{name:"Лидер дач",city:"МСК",type:"прямой",site:"liderdach.ru",price:"Дом Браун 6,5 млн",usp:"Квиз из 7 шагов / платеж на карточке",rating:"5,0 (240)",gar:"—",threat:"Высокая",src:"Отчет + сверка · средн.",firm:"ООО «Лидер Дач» · 93,8 млн · 6 чел. · Кубышкин А.А.",soc:'<a href="https://t.me/lider_dach">TG 1 568</a> · <a href="https://vk.com/sk_lider_dach">VK</a> · <a href="https://www.youtube.com/@liderdach">YT</a> · <a href="https://rutube.ru/channel/39877659/">Rutube 40</a>',seg:1,spec:1,px:.60,py:.42},
+{name:"Теремъ",city:"МСК+СПБ",type:"якорь",site:"terem-pro.ru",price:"3,68–7,09 млн",usp:"Свои финансы / гарантия 25 лет / клуб клиентов",rating:"4,8 (2 550)",gar:"25 лет",threat:"Средняя",src:"Отчет + сверка · высок.",firm:"ООО «Теремъ» · 2 590 млн · 325 чел. · Маркозашвили Б.В. + 5",soc:'<a href="https://t.me/terem_pro">TG 3 657</a> · <a href="https://vk.com/pro_terem">VK</a> · <a href="https://rutube.ru/channel/25817797/">Rutube 145</a>',seg:2,spec:1,px:.78,py:.62},
+{name:"Дачный сезон",city:"МСК+СПБ",type:"якорь",site:"home-projects.ru",price:"от 43 тыс/м²",usp:"5 000+ домов / кабинет клиента / камера",rating:"4,7 (402)",gar:"15 лет",threat:"Средняя",src:"Отчет + сверка · высок.",firm:"ООО «Каркасные Дома Номер Один» · 55 млн · 4 чел. · Макурин М.И.",soc:'<a href="https://t.me/domadlyazhizni">TG 5 198</a> · <a href="https://vk.com/dachny_sezon">VK</a> · <a href="https://www.youtube.com/channel/UCBQtYXAvhOAhdWKkj1rswsA">YT</a> · <a href="https://rutube.ru/channel/24958492/">Rutube 52</a>',seg:1,spec:1,px:.70,py:.66},
+{name:"Домок",city:"МСК",type:"прямой",site:"dom-ok.com",price:"2,67–7,25 млн",usp:"Витрина из 215 домов / скидки 16%",rating:"4,9 / 2,6 Zoon",gar:"—",threat:"Средняя",src:"Отчет + сверка · высок.",firm:"ООО «Домок» · 427 млн · 69 чел. · Васильев Е.А.",soc:'<a href="https://t.me/domokstroit">TG 2 224</a> · <a href="https://vk.com/domok.stroit">VK</a> · <a href="https://www.youtube.com/channel/UCVKiajXVBavOQi66uOZKEdA">YT</a> · <a href="https://rutube.ru/channel/23469806/">Rutube 148</a>',seg:1,spec:0,px:.45,py:.50},
+{name:"Каркасник",city:"МСК",type:"эконом",site:"karkasnik.ru",price:"от 1,01 млн",usp:"Калькулятор / без предоплаты / 20 регионов",rating:"—",gar:"1–2 года",threat:"Средняя",src:"Отчет + сверка · средн.",firm:"ООО «Каркасник» · 0,05 млн · 0 чел. · Кудряшов А.А.",soc:'<a href="https://t.me/OOO_Karkasnik">TG (контакт)</a> · MAX с сайта',seg:0,spec:1,px:.18,py:.55},
+{name:"Tesla House",city:"МСК+СПБ",type:"ниша",site:"tesla-house.ru",price:"ипотека от 4,7%",usp:"Одобрение за 3 дня / свой кредитный отдел",rating:"4,8",gar:"—",threat:"Средняя",src:"Отчет + сверка · средн.",firm:"ООО «АПС СМУ» (привязка) · 56 млн · 0 чел. · Просветов В.С.",soc:'<a href="https://vk.com/public214228233">VK</a> · <a href="https://www.youtube.com/@TESLA-HOUSE">YT</a>',seg:3,spec:0,px:.55,py:.70},
+{name:"Наш Домстрой",city:"МСК",type:"эконом",site:"nashdomstroi.ru",price:"от 2,35 млн",usp:"От 26 тыс/м²",rating:"—",gar:"—",threat:"Средняя",src:"Отчет + сверка · средн.",firm:"ООО «Наш Дом Строй» · 193 млн · 10 чел. · Ситнов Д.А.",soc:'<a href="https://t.me/CKnashdomstroi">TG 965</a> · <a href="https://vk.com/nashdomstroi">VK</a> · <a href="https://www.youtube.com/@nashdomstroi">YT</a>',seg:0,spec:0,px:.22,py:.68},
+{name:"СтройМир",city:"МСК",type:"ниша",site:"stroymir53.ru",price:"1,55–4,72 млн",usp:"С 2008 года / только дерево",rating:"—",gar:"—",threat:"Средняя",src:"Отчет + сверка · средн.",firm:"ООО СК «Строймир» · 36 млн · 8 чел. · Виноградова А.А.",soc:'<a href="https://t.me/STROYMIR_53">TG 689</a> · <a href="https://vk.com/stroymir_53">VK</a> · <a href="https://www.youtube.com/@Stroymir53">YT</a>',seg:1,spec:2,px:.30,py:.72},
+{name:"Строй и Живи",city:"СПБ",type:"прямой",site:"сиж.рф",price:"1,51–6,7 млн",usp:"20 лет / соцсети-машина / чат со стройки",rating:"4,7 (240)",gar:"20 лет",threat:"Высокая",src:"Срез СПБ 02.10 · высок.",firm:"ООО «СТРОЙ И ЖИВИ» · 50,1 млн · 4 чел. · Касумов А.Т.",soc:'<a href="https://www.youtube.com/@stroyizhivi">YT ~515K</a> · <a href="https://vk.ru/stroyizhivi">VK 78 402</a> · <a href="https://t.me/sig2015">TG 6,44K</a>',seg:1,spec:0,px:.50,py:.26},
+{name:"Сканди ЭкоДом",city:"СПБ",type:"премиум",site:"scandiecodom.ru",price:"от 4,95 млн",usp:"Барн и фахверк / 20 лет / 164 проекта",rating:"4,8 (89)",gar:"20 лет",threat:"Высокая",src:"Срез СПБ · высок.",firm:"ООО «РУСПРОДУКТ» · 159,8 млн · 5 чел. · Храбрых А.Ю.",soc:'<a href="https://vk.com/scandiecodom">VK 10 273</a> · <a href="https://www.youtube.com/@scandiecodom">YT 532</a> · <a href="https://t.me/scandiecodom">TG</a>',seg:2,spec:0,px:.82,py:.28},
+{name:"Багров-Строй",city:"СПБ",type:"эконом",site:"bagrovstroy.ru",price:"от 0,63 млн",usp:"Фильтр на 100+ тегов / топ выдачи",rating:"4,3 (51)",gar:"5 лет",threat:"Высокая",src:"Срез СПБ · высок.",firm:"ООО «БАГРОВСТРОЙ» — ликвидировано 25.09.2025",soc:'<a href="https://www.youtube.com/channel/UCaxfVmAD-ChQj7vA6QitkNQ">YT 26,8K</a> · <a href="https://vk.ru/bagrovstroy">VK 18 231</a> · <a href="https://t.me/bagrovstroy">TG</a>',seg:0,spec:0,px:.15,py:.40},
+{name:"СПБКД",city:"СПБ",type:"прямой",site:"spbkd.ru",price:"2,3–4,42 млн",usp:"С 2011 года / фикс цены / 450+ проектов",rating:"4,7 (43)",gar:"—",threat:"Средняя",src:"Срез СПБ · высок.",firm:"ООО «ПЕТЕРБУРГСКИЕ КАРКАСНЫЕ ДОМА» · 63,8 млн · 2 чел. · Чижик А.И.",soc:'<a href="https://vk.ru/spbkd">VK</a>',seg:1,spec:0,px:.35,py:.44},
+{name:"ЛенСтройДом",city:"СПБ",type:"прямой",site:"lenstroydom.ru",price:"1,39–7,3 млн",usp:"С 2006 года / аккредитация Сбера",rating:"4,3 (106)",gar:"расшир.",threat:"Средняя",src:"Сайт + Карты 02.10 · высок.",firm:"ООО «СК ЛЕНСТРОЙДОМ» · 0 млн · 1 чел. · Антонищак Л.И.",soc:'<a href="https://www.youtube.com/@LENSTROYDOM">YT 91,4K</a> · <a href="https://vk.ru/lenstroydom">VK 53 675</a> · <a href="https://t.me/lenstroydomspb">TG</a>',seg:1,spec:1,px:.40,py:.58},
+{name:"ПЗСК",city:"СПБ",type:"прямой",site:"1zsk.ru",price:"от 2,22 млн",usp:"200+ проектов",rating:"4,6 (62)",gar:"—",threat:"Средняя",src:"Срез СПБ · средн.",firm:"ООО «ПЗСК» · 43 млн · 3 чел. · Чижов А.С.",soc:'<a href="https://vk.ru/1zskstroy">VK ~980</a>',seg:1,spec:1,px:.32,py:.52},
+{name:"Избург",city:"МСК+СПБ",type:"премиум",site:"izburg.ru",price:"до 6,49 млн",usp:"Финская технология с 2004 / сервис",rating:"4,7 / 4,9",gar:"10 лет",threat:"Высокая",src:"Сайт + Домклик · высок.",firm:"ООО «ИЗБУРГ» · 10 млн · 5 чел. · Мозговой Д.В.",soc:'<a href="https://t.me/IZBURG">TG 8 453</a> · <a href="https://vk.com/izburg">VK</a> · <a href="https://www.youtube.com/channel/UCChx2At82xIfIXlEjd69Vnw">YT</a> · <a href="https://dzen.ru/izburg">Дзен</a>',seg:2,spec:0,px:.80,py:.36},
+{name:"Столетие",city:"СПБ",type:"прямой",site:"skstoletie.ru",price:"1,0–4,46 млн",usp:"244 проекта / мега-фильтр / неустойка за срок",rating:"4,9 (210)",gar:"5 лет",threat:"Высокая",src:"Сайт + Карты · высок.",firm:"ООО «СК СТОЛЕТИЕ» · 14 млн · 1 чел. · Непомнящая К.Ю.",soc:'<a href="https://t.me/skstoletie">TG 538</a> · <a href="https://vk.com/skstoletie">VK</a> · <a href="https://dzen.ru/skstoletie">Дзен</a>',seg:1,spec:0,px:.38,py:.32},
+{name:"Класс Хаус",city:"СПБ",type:"прямой",site:"class-house.ru",price:"3,62–6,2 млн",usp:"36 сделок по эскроу / цены по слоям",rating:"5,0 (103)",gar:"5 лет",threat:"Высокая",src:"Сайт + Домклик · высок.",firm:"ООО «СККХ» · 206 млн · 4 чел. · Смородин П.Н.",soc:'<a href="https://t.me/klasshouse">TG 1 641</a> · <a href="https://vk.com/klass.house">VK</a> · <a href="https://www.youtube.com/channel/UCcZKsjf_H5ffK_4p3jwBaSg">YT</a> · <a href="https://ok.ru/group/63361648361523">OK 59</a>',seg:1,spec:0,px:.58,py:.24},
+{name:"Семья Строй",city:"СПБ",type:"прямой",site:"semia-stroy.ru",price:"2,19–3,45 млн",usp:"9 подарков до 31.10 / ноль предоплаты",rating:"4,8 (43)",gar:"—",threat:"Высокая",src:"Сайт + Домклик · высок.",firm:"ИП Федоров А.В. — отчетности нет",soc:'<a href="https://vk.ru/club134523577">VK</a> · <a href="https://www.youtube.com/channel/UCGI5qv7I2cqpEfr6WhFijDg">YT</a>',seg:1,spec:1,px:.28,py:.28},
+{name:"СтройКомфорт",city:"СПБ",type:"прямой",site:"domakarkas.ru",price:"не сняты",usp:"Высокий рейтинг на Картах",rating:"4,9 (99)",gar:"—",threat:"Средняя",src:"Карты 02.10 · средн.",firm:"ООО «СТРОЙКОМФОРТ» · 46 млн · 0 чел. · Смирнов Н.О.",soc:'<a href="https://t.me/stroycomfort">TG 387</a> · <a href="https://vk.com/stroykomfort0">VK</a> · <a href="https://www.youtube.com/channel/UCqrzuINCctG6GbF3MnmaXrA">YT</a>',seg:1,spec:0,px:.48,py:.48},
+{name:"СтройДомКомфорт",city:"СПБ",type:"прямой",site:"stroy-dc.ru",price:"не сняты",usp:"Одноэтажник 9×12",rating:"4,7 (92)",gar:"—",threat:"Средняя",src:"Карты 02.10 · средн.",firm:"ИП Гоголин Ю.В. — отчетности нет",soc:'Соцсетей на сайте нет',seg:3,spec:0,px:.44,py:.54},
+{name:"СК-Апрель",city:"МСК",type:"прямой",site:"sk-aprel.ru",price:"по запросу",usp:"Без предоплаты / бесплатное ипот. сопровождение",rating:"—",gar:"—",threat:"Высокая",src:"Сайт 02.10",firm:"ООО «СК-Апрель» (ИНН не снят)",soc:'<a href="https://vk.com/companyaprel">VK</a> · <a href="https://www.youtube.com/@SKAprel">YT</a>',seg:3,spec:1,px:.30,py:.30},
+{name:"СК-Теремок",city:"МСК",type:"прямой",site:"sk-teremok.ru",price:"от 0,88 млн",usp:"15 лет / 2000+ домов / калькулятор",rating:"—",gar:"15 лет",threat:"Высокая",src:"Сайт 02.10",firm:"ООО «Мастерок» ИНН 9709073358",soc:'<a href="https://vk.com/sk.teremok">VK</a> · TG',seg:0,spec:1,px:.25,py:.35},
+{name:"Брус-Дома",city:"МСК",type:"эконом",site:"brus-doma.com",price:"каркас от 0,42 млн",usp:"Демпинг витрины / 5 лет",rating:"—",gar:"5 лет",threat:"Средняя",src:"Сайт 02.10",firm:"не найдено",soc:'<a href="https://vk.com/public176355147">VK</a> · <a href="https://t.me/brusdoma">TG</a>',seg:0,spec:1,px:.12,py:.45},
+{name:"ДомДомино",city:"МСК",type:"ниша",site:"domdomino.ru",price:"модульные от 0,28 млн",usp:"Рассрочка без банка / 4500+ построено",rating:"—",gar:"—",threat:"Средняя",src:"Сайт 02.10",firm:"не найдено",soc:'<a href="https://vk.com/domdominomsk">VK</a> · <a href="https://t.me/domdomino_ru">TG</a>',seg:0,spec:2,px:.15,py:.60},
+{name:"Дома от Михалыча",city:"Н.Новгород",type:"прямой",site:"дома-от-михалыча.рф",price:"2,3–5 млн",usp:"Подарки / калькулятор / 5 лет",rating:"—",gar:"5 лет",threat:"Низкая",src:"Сайт 02.10",firm:"не найдено",soc:'<a href="https://vk.com/doma.nnov">VK</a> · YT',seg:1,spec:1,px:.40,py:.55},
+{name:"ДБрус",city:"МСК",type:"прямой",site:"dbrus.ru",price:"3,47–10,17 млн",usp:"Эскроу + 4 банка / онлайн-стройконтроль",rating:"—",gar:"—",threat:"Высокая",src:"Сайт 02.10",firm:"ООО «ДБРУС» ИНН 7751199086",soc:'<a href="https://t.me/dbrussk">TG</a> · <a href="https://www.youtube.com/@dbrus">YT</a>',seg:1,spec:0,px:.65,py:.30},
+{name:"Нархозстрой",city:"МСК",type:"премиум",site:"narhozstroy.ru",price:"по запросу",usp:"50 лет / свой завод / квиз",rating:"—",gar:"50 лет",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «СК-Дельта» ИНН 4025448240",soc:'<a href="https://vk.com/club_narhozstroy">VK</a> · YT',seg:3,spec:2,px:.85,py:.60},
+{name:"Ривьера",city:"СПБ",type:"премиум",site:"gcriviera.ru",price:"7–11,5 млн",usp:"Ипотека от 3% / квиз",rating:"—",gar:"—",threat:"Средняя",src:"Сайт 02.10",firm:"ИП Зыонг Ти Киен",soc:'<a href="https://t.me/gcriviera">TG 40</a> · <a href="https://vk.com/gcriviera">VK</a>',seg:2,spec:2,px:.80,py:.40},
+{name:"КСК Хаус",city:"СПБ",type:"прямой",site:"kskhouse.ru",price:"4,15–11,15 млн",usp:"40+ проектов / 208 млн",rating:"—",gar:"5 лет",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «Загородный дом» · 208 млн · 13 чел.",soc:'<a href="https://t.me/kskhouse">TG 2 099</a> · <a href="https://vk.com/kskhouseru">VK</a>',seg:2,spec:1,px:.75,py:.35},
+{name:"АПС ДСК",city:"СПБ",type:"ниша",site:"aps-dsk.ru",price:"цены не показаны",usp:"Пожизненная гарантия / эскроу / ТОП-30 Сбера",rating:"—",gar:"пожизненная",threat:"Средняя",src:"Сайт 02.10",firm:"АПС ДСК Северо-Запад · 62 млн",soc:'TG · VK',seg:3,spec:2,px:.70,py:.65},
+{name:"ЭкоБрус",city:"СПБ",type:"прямой",site:"каркасный-дом-подключ.рф",price:"цены за лид-формой",usp:"Подарки до 31.10 / 14 дней / квиз",rating:"—",gar:"—",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «Экобрус»",soc:'—',seg:3,spec:0,px:.35,py:.45},
+{name:"СК Империя",city:"СПБ",type:"прямой",site:"sk-imperiya.ru",price:"от 1,34 млн",usp:"20,7 млн / штат 5",rating:"—",gar:"—",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «СК Империя» · 20,7 млн · 5 чел.",soc:'<a href="https://vk.com/skimperiya">VK</a>',seg:0,spec:1,px:.20,py:.50},
+{name:"СВОЙ",city:"СПБ",type:"прямой",site:"spb.svoi.house",price:"цены не показаны",usp:"186 млн (+103%) / эскроу / 15 лет",rating:"—",gar:"15 лет",threat:"Высокая",src:"Сайт 02.10",firm:"ООО «СВОЙ» · 186 млн · 12 чел. · Снопков",soc:'<a href="https://t.me/svoihouse_spb">TG 582</a> · <a href="https://vk.com/svoi.house">VK</a>',seg:3,spec:1,px:.60,py:.40},
+{name:"Хаус-Строй",city:"СПБ",type:"эконом",site:"house-stroy.ru",price:"от 0,51 млн",usp:"Квиз + калькулятор",rating:"—",gar:"—",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «Строй-Центр» · ~52 млн",soc:'<a href="https://vk.com/house_stroy">VK</a>',seg:0,spec:1,px:.18,py:.57},
+{name:"СК Домострой",city:"СПБ",type:"прямой",site:"spb.sk-domostroi.ru",price:"от 1,57 млн",usp:"13,3 млн (×132) / 5 лет",rating:"—",gar:"5 лет",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «СК Домострой» · 13,3 млн",soc:'<a href="https://t.me/sk_domostroi">TG 257</a> · VK',seg:1,spec:0,px:.33,py:.48},
+{name:"СПБ-Дома",city:"СПБ",type:"прямой",site:"spb-doma.ru",price:"3,41–5,19 млн",usp:"Калькулятор / 246+115 проектов",rating:"—",gar:"7/15/5",threat:"Средняя",src:"Сайт 02.10",firm:"ООО «Стройкомфорт» · 23,7 млн",soc:'TG · WhatsApp',seg:1,spec:1,px:.55,py:.42},
+{name:"Глав-Метр",city:"СПБ",type:"эконом",site:"glav-metr.ru",price:"от 37 000 ₽/м²",usp:"Юрлица нет / квиз",rating:"—",gar:"10/5",threat:"Средняя",src:"Сайт 02.10",firm:"не найдено",soc:'<a href="https://t.me/glavmetr">TG 20</a> · VK',seg:0,spec:0,px:.25,py:.62}
+];
+var SEGS=['Эконом · до ~2,5 млн','Средний · 2,5–6 млн','Верх · от 6 млн','Цена не показана'];
+var SPECS=['Чистый каркас','Смешанные технологии','Модули / брус / участки'];
+var cmap=document.getElementById('posmap');cmap.innerHTML='';
+var mxtbl=document.createElement('table');mxtbl.className='mx';
+var mhtml='<thead><tr><th></th>';
+SEGS.forEach(function(s){mhtml+='<th>'+s+'</th>';});
+mhtml+='</tr></thead><tbody>';
+SPECS.forEach(function(sp,r){
+mhtml+='<tr><td class="spec">'+sp+'</td>';
+SEGS.forEach(function(sg,c){
+var cell=DATA.filter(function(d){return (d.seg==null?3:d.seg)===c&&(d.spec==null?1:d.spec)===r;}).sort(function(a,b){return a.name<b.name?-1:1;});
+mhtml+='<td>'+cell.map(function(d){return '<button class="mchip" data-n="'+d.name+'" title="'+d.name+' · '+d.price+' · угроза: '+d.threat+'" style="background:'+(d.threat==='Высокая'?'#a4132e':d.threat==='Средняя'?'#5b4bc4':'#68727f')+'">'+d.name+'</button>';}).join('')+'</td>';
+});
+mhtml+='</tr>';
+});
+mhtml+='</tbody>';
+mxtbl.innerHTML=mhtml;
+cmap.appendChild(mxtbl);
+cmap.querySelectorAll('.mchip').forEach(function(ch){ch.addEventListener('click',function(){document.getElementById('pq').value=ch.getAttribute('data-n');renderProfiles();document.getElementById('profiles').scrollIntoView();});});
+var tb=document.getElementById('cbody');
+function renderTable(){
+var q=(document.getElementById('q').value||'').toLowerCase();
+var c=document.getElementById('fcity').value,t=document.getElementById('ftype').value,h=document.getElementById('fthr').value;
+var rows=DATA.filter(function(d){return (!q||(d.name+d.site+d.usp+d.price).toLowerCase().indexOf(q)>-1)&&(!c||d.city===c)&&(!t||d.type===t)&&(!h||d.threat===h);});
+tb.innerHTML=rows.map(function(d){return '<tr><td><b>'+d.name+'</b></td><td>'+d.city+'</td><td>'+d.type+'</td><td><a href="https://'+d.site+'" target="_blank" rel="noopener">'+d.site+'</a></td><td>'+d.price+'</td><td>'+d.usp+'</td><td>'+d.rating+'</td><td>'+d.gar+'</td><td>'+d.threat+'</td><td>'+d.src+'</td></tr>';}).join('');
+document.getElementById('ccount').textContent='Показано: '+rows.length+' из '+DATA.length;
+}
+['q','fcity','ftype','fthr'].forEach(function(id){document.getElementById(id).addEventListener('input',renderTable);document.getElementById(id).addEventListener('change',renderTable);});
+document.getElementById('reset').addEventListener('click',function(){document.getElementById('q').value='';document.getElementById('fcity').value='';document.getElementById('ftype').value='';document.getElementById('fthr').value='';renderTable();});
+var sortK=null,sortD=1;
+document.querySelectorAll('#ctable th[data-k]').forEach(function(th){th.addEventListener('click',function(){var k=th.getAttribute('data-k');if(sortK===k)sortD*=-1;else{sortK=k;sortD=1;}DATA.sort(function(a,b){return (a[k]>b[k]?1:-1)*sortD;});renderTable();});});
+renderTable();
+var pc=document.getElementById('pcards');
+function renderProfiles(){
+var q=(document.getElementById('pq').value||'').toLowerCase();var c=document.getElementById('pcity').value;
+pc.innerHTML=DATA.filter(function(d){return (!q||(d.name+d.site+d.usp).toLowerCase().indexOf(q)>-1)&&(!c||d.city===c);}).map(function(d){
+return '<div class="card"><h4>'+d.name+' <span class="badge">'+d.city+'</span><span class="badge">'+d.type+'</span></h4><div style="font-size:13px;color:#333">'+d.usp+'</div><div style="font-size:13px;color:#333"><b>Фирма:</b> '+d.firm+'</div><div style="font-size:13px;color:#333"><b>Соцсети:</b> '+d.soc+'</div><div style="font-size:13px;margin-top:6px"><b>Цена:</b> '+d.price+' · <b>Рейтинг:</b> '+d.rating+' · <b>Гарантия:</b> '+d.gar+' · <b>Угроза:</b> '+d.threat+'</div><div class="more"><b>Сайт:</b> <a href="https://'+d.site+'" target="_blank" rel="noopener">'+d.site+'</a><br><b>Источник:</b> '+d.src+'</div><button class="btn" style="margin-top:8px" aria-expanded="false">Развернуть</button></div>';}).join('');
+pc.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(){var card=b.parentElement;card.classList.toggle('open');var open=card.classList.contains('open');b.textContent=open?'Свернуть':'Развернуть';b.setAttribute('aria-expanded',open);});});
+}
+['pq','pcity'].forEach(function(id){document.getElementById(id).addEventListener('input',renderProfiles);document.getElementById(id).addEventListener('change',renderProfiles);});
+renderProfiles();
+})();
+</script>
+</body>
+</html>
